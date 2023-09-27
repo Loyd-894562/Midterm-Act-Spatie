@@ -12,11 +12,15 @@
 <div class="main-nav" :class="collapse">
     <Link href="/dashboard" class="ml-0">
         <i class="fa fa-home"></i>
-         <span v-show="!collapse" >Dashboard</span> 
+         <span v-show="!collapse" class="ml-2">Dashboard</span> 
     </Link>
     <Link href="/clients">
         <i class="fa-solid fa-address-book"></i>
-        <span v-show="!collapse">Client List</span> 
+        <span v-show="!collapse" class="ml-2">Client List</span> 
+    </Link>
+    <Link href="/suppliers">
+        <i class="fa-solid fa-briefcase"></i>
+        <span v-show="!collapse" class="ml-2">Suppliers</span> 
     </Link>
 </div>
 
