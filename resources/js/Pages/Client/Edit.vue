@@ -6,5 +6,5 @@
       <Sidebar>
         <div></div>
       </Sidebar>
-    
+
 </template>

@@ -15,24 +15,18 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        $role_admin     =   Role::create(['name' =>'admin']);
-        $role_manager   =   Role::create(['name' =>'student']);
-     
+      $admin = Role::create(['name'=>'admin']);
+      $manager = Role::create(['name'=>'manager']);
 
-        $manage_supplier = Permission::create(['name' => 'manage medicine']);
-        $manage_product = Permission::create(['name' => 'manage patient']);
-        
-       
+      Permission::create(['name'=>'manage-suppliers']);
+      Permission::create(['name'=> 'manage-products']);
+      Permission::create(['name'=> 'manage-users']);
 
-        $permission_admin =  [ $manage_supplier];
+      $admin->givePermissionTo('manage-suppliers');
+      $manager->givePermissionTo('manage-products');
 
-        $permission_manager =  [$manage_product ];
+      User::find(1)->assignRole('admin');
+      User::find(2)->assignRole('manager');
 
-        $role_admin->syncPermissions($permission_admin);
-        $role_manager->syncPermissions($permission_manager);
-
-        User::find(1)->assignRole($role_admin);
-        User::find(2)->assignRole($role_manager);
-     
     }
 }

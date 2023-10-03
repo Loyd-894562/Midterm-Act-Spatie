@@ -8,8 +8,16 @@
         contact_no: '',
         email: '',
         address: '',
-      
+
     })
+
+    const submit = () =>{
+        form.post('/suppliers')
+        form.name = ""
+        form.contact_no = ""
+        form.email = ""
+        form.address = ""
+    }
 </script>
 
 <template>
@@ -19,54 +27,36 @@
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">Create Supplier</h2>
         </template>
 
-        <div class="py-12">
-            <div class="flex justify-center items-center">
-                <div class="w-11/12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
-       
-                    <form class="w-full max-w-lg mt-5">
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-name">
-                                Name
-                            </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
-                            <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+        <div class="py-6">
+            <div class="flex flex-col justify-center items-center">
+                <div class="relative flex flex-col items-center rounded-[20px] w-[500px] max-w-[95%] mx-auto bg-white bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:!shadow-none p-3">
+                    <div class="mt-5 mb-10 w-full  rounded-sm px-4">
+                        <form class="mt-6" @submit.prevent="submit">
+                            <div class="flex justify-between gap-3">
+                              <span class="w-1/2">
+                                <label for="name" class="block text-xs font-semibold text-gray-600 uppercase">Name</label>
+                                <input id="name" v-model="form.name" type="text" name="name"   class="block w-full p-3 mt-2 text-gray-700 " required />
+                              </span>
+                              <span class="w-1/2">
+                                <label for="contact_no" class="block text-xs font-semibold text-gray-600 uppercase">contact_no</label>
+                                <input v-model="form.contact_no" id="contact_no" type="number" name="contact_no" placeholder="" class="block w-full p-3 mt-2 text-gray-700" required />
+                              </span>
                             </div>
-                            <div class="w-full md:w-1/2 px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                                Contact No
-                            </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-contact_no" type="number" placeholder="">
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                            <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                                Email
-                            </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="email" >
-                            <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap -mx-3 mb-2">
-                            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                                Address
-                            </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
-                        </div>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                          Button
-                        </button>
+                            <label for="email" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">E-mail</label>
+                            <input id="email" v-model="form.email" type="email" name="email"   class="block w-full p-3 mt-2 text-gray-700" required />
+                            <label for="address" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Address</label>
+                            <input id="address" v-model="form.address" type="text" name="address" placeholder=""  class="block w-full p-3 mt-2 text-gray-700" required />
+                            <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+                              Save
+                            </button>
+
+                          </form>
                     </div>
-                  </form>
-        </div>
-      </div>
-        <div>
+                </div>
+            </div>
 
         </div>
-        </div>
-        
+
       </Sidebar>
-   
+
 </template>

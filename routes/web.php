@@ -41,13 +41,27 @@ Route::middleware('auth')->group(function () {
     Route::get('/clients/create', [ClientController::class, 'create']);
     Route::post('/clients', [ClientController::class, 'store']);
 
-    Route::get('/suppliers', [SupplierController::class, 'index']);
+    Route::middleware('can:manage-suppliers')->group(function(){
     Route::get('/suppliers/create', [SupplierController::class, 'create']);
     Route::post('/suppliers', [SupplierController::class, 'store']);
+    Route::get('/suppliers/edit/{suppliers}', [SupplierController::class, 'edit']);
+    Route::put('/suppliers/{suppliers}',[SupplierController::class, 'update']);
+    Route::delete('/suppliers/{suppliers}', [SupplierController::class, 'destroy']);
+    });
 
-    Route::get('/products', [ProductController::class, 'index']);
+    Route::get('/suppliers', [SupplierController::class, 'index']);
+    Route::get('/suppliers/{suppliers}',[SupplierController::class, 'show']);
+
+    Route::middleware('can:manage-products')->group(function(){
     Route::get('/products/create', [ProductController::class, 'create']);
     Route::post('/products', [ProductController::class, 'store']);
+    Route::get('/products/edit/{products}', [ProductController::class, 'edit']);
+    Route::put('/products/{products}',[ProductController::class, 'update']);
+    Route::delete('/products/{products}', [ProductController::class, 'destroy']);
+    });
+
+    Route::get('/products', [ProductController::class, 'index']);
+    Route::get('/products/{products}',[ProductController::class, 'show']);
 });
 
 require __DIR__.'/auth.php';
