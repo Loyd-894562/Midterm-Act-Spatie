@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -43,6 +44,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/suppliers', [SupplierController::class, 'index']);
     Route::get('/suppliers/create', [SupplierController::class, 'create']);
     Route::post('/suppliers', [SupplierController::class, 'store']);
+
+    Route::get('/products', [ProductController::class, 'index']);
+    Route::get('/products/create', [ProductController::class, 'create']);
+    Route::post('/products', [ProductController::class, 'store']);
 });
 
 require __DIR__.'/auth.php';

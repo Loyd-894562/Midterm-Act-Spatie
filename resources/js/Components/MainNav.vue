@@ -22,6 +22,10 @@
         <i class="fa-solid fa-briefcase"></i>
         <span v-show="!collapse" class="ml-2">Suppliers</span> 
     </Link>
+    <Link href="/products">
+        <i class="fa-brands fa-product-hunt"></i>
+        <span v-show="!collapse" class="ml-2">Products</span> 
+    </Link>
 </div>
 
 </template>

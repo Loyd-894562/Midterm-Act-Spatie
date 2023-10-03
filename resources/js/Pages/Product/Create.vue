@@ -5,9 +5,8 @@
 
     const form = useForm({
         name: '',
-        contact_no: '',
-        email: '',
-        address: '',
+        qty: '',
+      
       
     })
 </script>
@@ -16,7 +15,7 @@
      <Head title="Create Supplier" />
       <Sidebar>
         <template #header>
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Create Supplier</h2>
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Create Product</h2>
         </template>
 
         <div class="py-12">
@@ -34,32 +33,16 @@
                             </div>
                             <div class="w-full md:w-1/2 px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                                Contact No
+                                Qty
                             </label>
                             <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-contact_no" type="number" placeholder="">
                             </div>
                         </div>
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                            <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                                Email
-                            </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="email" >
-                            <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap -mx-3 mb-2">
-                            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                                Address
-                            </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
-                        </div>
+                       
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                          Button
+                        Button
                         </button>
-                    </div>
-                  </form>
+                </form>
         </div>
       </div>
         <div>

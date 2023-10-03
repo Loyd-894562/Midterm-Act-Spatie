@@ -1,6 +1,6 @@
 <script setup>
     import Sidebar from '@/Layouts/Sidebar.vue'
-import { useForm } from '@inertiajs/vue3';
+    import { useForm } from '@inertiajs/vue3';
 
     const form = useForm({
         last_name: '',

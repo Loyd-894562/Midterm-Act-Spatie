@@ -5,9 +5,8 @@
 
     const form = useForm({
         name: '',
-        contact_no: '',
-        email: '',
-        address: '',
+        qty: '',
+     
       
     })
 </script>
@@ -55,11 +54,9 @@
                             </label>
                             <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
                         </div>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                          Button
-                        </button>
+                       
                     </div>
-                  </form>
+</form>
         </div>
       </div>
         <div>

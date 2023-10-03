@@ -1,5 +1,6 @@
 <script setup>
     import Sidebar from '@/Layouts/Sidebar.vue'
+    import { Head } from '@inertiajs/vue3';
 </script>
 
 <template>
