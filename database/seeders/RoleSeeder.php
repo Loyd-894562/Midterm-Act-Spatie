@@ -22,7 +22,7 @@ class RoleSeeder extends Seeder
       Permission::create(['name'=> 'manage-products']);
       Permission::create(['name'=> 'manage-users']);
 
-      $admin->givePermissionTo('manage-suppliers');
+      $admin->givePermissionTo('manage-suppliers', 'manage-users');
       $manager->givePermissionTo('manage-products');
 
       User::find(1)->assignRole('admin');

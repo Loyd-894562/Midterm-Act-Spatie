@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -62,6 +63,18 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/products', [ProductController::class, 'index']);
     Route::get('/products/{products}',[ProductController::class, 'show']);
+
+    Route::middleware('can:manage-users')->group(function(){
+        Route::get('/users', [UserController::class, 'index']);
+        Route::get('/users/create', [UserController::class, 'create']);
+        Route::post('/users', [UserController::class, 'store']);
+        Route::get('/users/edit/{users}', [UserController::class, 'edit']);
+        Route::put('/users/{users}',[UserController::class, 'update']);
+        Route::delete('/users/{users}', [UserController::class, 'destroy']);
+        Route::get('/users/{users}',[UserController::class, 'show']);
+        });
+    
+        
 });
 
 require __DIR__.'/auth.php';

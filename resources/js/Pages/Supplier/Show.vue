@@ -18,7 +18,7 @@ const user = computed(() => page.props.auth.user)
         <template #header>
             <div class="flex">
                 <h2 class="flex-1 font-semibold text-xl text-gray-800 leading-tight">View Supplier | {{ suppliers.name }}</h2>
-                <Link class="px-4 py-2 bg-gray-100 shadow border-gray-300 border hover:bg-white rounded" as="button" :href="'/products/'">Back</Link>
+                <Link class="px-4 py-2 bg-gray-100 shadow border-gray-300 border hover:bg-white rounded" as="button" :href="'/suppliers'">Back</Link>
             </div>
         </template>
 
@@ -30,10 +30,10 @@ const user = computed(() => page.props.auth.user)
                         <div class="flex-1 ml-4">
                             <div class="flex">
                                 <h3 class="text-2xl flex-1">Name: {{ suppliers.name }}</h3>
-                                <div>
+                                <!-- <div>
                                     <Link class="px-4 py-2 bg-red-600 text-white rounded shadow hover:bg-red-700 mr-2 mb-2" :href="'/suppliers/' + suppliers.id" method="delete" as="button">Delete</Link>
                                     <Link class="px-4 py-2 bg-blue-600 rounded shadow hover:bg-blue-700" :href="'/suppliers/edit/' + suppliers.id" as="button">Edit</Link>
-                                </div>
+                                </div> -->
                             </div>
                             <hr>
                             <div class="mt-4"> Email: {{ suppliers.email }}</div>

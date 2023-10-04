@@ -2,6 +2,7 @@
     import Sidebar from '@/Layouts/Sidebar.vue'
     import { useForm } from '@inertiajs/vue3';
     import { Head } from '@inertiajs/vue3';
+    import { Link } from '@inertiajs/vue3';
 
     const form = useForm({
         name: '',
@@ -24,7 +25,10 @@
      <Head title="Create Supplier" />
       <Sidebar>
         <template #header>
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Create Supplier</h2>
+          <div class="flex">
+                <h2 class="flex-1 font-semibold text-xl text-gray-800 leading-tight">Create Supplier</h2>
+                <Link class="px-4 py-2 bg-gray-100 shadow border-gray-300 border hover:bg-white rounded" as="button" :href="'/suppliers'">Back</Link>
+            </div>
         </template>
 
         <div class="py-6">

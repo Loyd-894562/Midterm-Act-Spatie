@@ -26,6 +26,10 @@
         <i class="fa-brands fa-product-hunt"></i>
         <span v-show="!collapse" class="ml-2">Products</span>
     </Link>
+    <Link href="/users" v-if="$page.props.auth.permissions.includes('manage-users')">
+        <i class="fa-regular fa-user"></i>
+        <span v-show="!collapse" class="ml-2">Users</span>
+    </Link>
 </div>
 
 </template>

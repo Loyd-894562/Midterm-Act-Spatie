@@ -21,7 +21,10 @@
      <Head title="Create Product" />
       <Sidebar>
         <template #header>
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Create Product</h2>
+          <div class="flex">
+                <h2 class="flex-1 font-semibold text-xl text-gray-800 leading-tight">Create Product</h2>
+                <Link class="px-4 py-2 bg-gray-100 shadow border-gray-300 border hover:bg-white rounded" as="button" :href="'/products'">Back</Link>
+            </div>
         </template>
 
         <div class="py-6">
