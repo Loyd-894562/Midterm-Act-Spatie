@@ -45,7 +45,7 @@ class UserController extends Controller
         $fields = $request->validate([
             'name'=>'required',
             'email' => 'required|email',
-            'password' 
+            'password' => Hash::make($request->password),
         ]);
 
         $users->update($fields);
