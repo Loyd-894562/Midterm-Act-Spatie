@@ -32,14 +32,14 @@
 <template>
 
 <div class="flex min-h-screen">
-    <div id="sidebar" class="bg-purple-900 p-6 duration-500" :class="width" style="position: relative;">
+    <div id="sidebar" class="bg-green-600 p-6 duration-500" :class="width" style="position: relative;">
         <button class="text-xl text-tahiti" @click="toggleWidth" style="position: absolute; right: 10px; top:10px">
             <i class="fa-solid fa-bars"></i>
         </button>
         <div id="branding" :class="hidden">
-            <img src="/images/logo.png" alt="Logo"
+            <img src="/images/JLC.webp" alt="Logo"
                 class="w-[170px] h-[170px] mx-auto rounded-full object-cover">
-            <h1 class="text-3xl text-center text-white my-6">Eunizel Gabas</h1>
+            <h1 class="text-3xl text-center text-white my-6">Jhon Lyod Catalan</h1>
 
         </div>
         <MainNav :collapse="isCollapsed"/>
@@ -60,13 +60,6 @@
                                     />
                                 </Link>
                             </div>
-
-                            <!-- Navigation Links -->
-                            <!-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </NavLink>
-                            </div> -->
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">

@@ -14,8 +14,8 @@ import { Head } from '@inertiajs/vue3';
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">Hello Madlang People Mabuhay, Mini miss u so much</div>
+                <div class="bg-green-400 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-gray-900">Jhon Lyod Catalan BSIT-4</div>
                 </div>
             </div>
         </div>

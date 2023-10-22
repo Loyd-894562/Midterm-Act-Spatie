@@ -30,10 +30,6 @@ const user = computed(() => page.props.auth.user)
                         <div class="flex-1 ml-4">
                             <div class="flex">
                                 <h3 class="text-2xl flex-1">Name: {{ suppliers.name }}</h3>
-                                <!-- <div>
-                                    <Link class="px-4 py-2 bg-red-600 text-white rounded shadow hover:bg-red-700 mr-2 mb-2" :href="'/suppliers/' + suppliers.id" method="delete" as="button">Delete</Link>
-                                    <Link class="px-4 py-2 bg-blue-600 rounded shadow hover:bg-blue-700" :href="'/suppliers/edit/' + suppliers.id" as="button">Edit</Link>
-                                </div> -->
                             </div>
                             <hr>
                             <div class="mt-4"> Email: {{ suppliers.email }}</div>

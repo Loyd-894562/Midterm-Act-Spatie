@@ -22,7 +22,7 @@ const props = defineProps({
             <div class="py-12">
                 <div class="flex justify-between">
                     <h1 class="text-3xl font-medium text-gray-700 "></h1>
-                    <Link href="clients/create" class="btn-primary inline-flex items-center mr-20 px-2 py-2 bg-blue-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                    <Link href="clients/create" class="btn-primary inline-flex items-center mr-20 px-2 py-2 bg-green-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-green-700 focus:bg-green-700 active:bg-green-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
                         Create Client</Link>
                 </div>
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-wrap">
